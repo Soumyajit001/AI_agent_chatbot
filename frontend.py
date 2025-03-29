@@ -6,8 +6,8 @@ st.write("Create and Interact with the AI Agents!")
 
 system_prompt = st.text_area("Tell about your AI Agent: ", height=70, placeholder="Type your system prompt here...")
 
-MODEL_NAME_GROQ = ["llama-3.3-70b-versatile", "llama3-70b-8192", "mixtral-8x7b-32768"]
-MODEL_NAME_OPENAI = ["gpt-4o-mini"]
+MODEL_NAME_GROQ = ["llama-3.3-70b-versatile", "llama3-70b-8192"]
+MODEL_NAME_OPENAI = ["gpt-4o"]
 
 provider = st.radio("Select Provider:", ("Groq", "OpenAI"))
 
@@ -70,8 +70,12 @@ if st.button("Ask Agent!"):
             else:
                 st.subheader("Agent Response")
                 # agent_response = response_data.get("response", "No response field found in API data")
-                # st.markdown(f"**Final Response:** {agent_response}")
-                st.markdown(f"**Final Response:** {response}")
+                if isinstance(response_data, dict):  # Ensure it's a dictionary
+                    agent_response = response_data.get("response", "No response field found in API data")
+                else:
+                    agent_response = response_data  # If string, return as-is
+                st.markdown(f"**Final Response:** {agent_response}")
+                # st.markdown(f"**Final Response:** {response}")
         else:
             st.error(f"API request failed with status code: {response.status_code}")
     else:

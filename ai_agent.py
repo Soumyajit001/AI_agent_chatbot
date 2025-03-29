@@ -14,7 +14,7 @@ from langchain_openai import ChatOpenAI
 from langchain_community.tools.tavily_search import TavilySearchResults
 
 groq_llm = ChatGroq(model="llama-3.3-70b-versatile")
-openai_llm = ChatOpenAI(model="gpt-4o-mini")
+openai_llm = ChatOpenAI(model="gpt-4o")
 
 
 from langgraph.prebuilt import create_react_agent
@@ -38,7 +38,7 @@ def get_response_from_ai_agent(llm_id, query, allow_search, system_prompt, provi
         state_modifier = system_prompt
     )
 
-    state = {"messages": query}
+    state = {"messages": [query]}
     response = agent.invoke(state)
     messages = response.get("messages")
     ai_messages = [message.content for message in messages if isinstance(message, AIMessage)]
