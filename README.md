@@ -10,9 +10,13 @@ User-Friendly UI: Built with Streamlit for an interactive experience.
 ## Prerequisites
 Python 3.8+
 Anaconda (optional, for environment management)
+
 API Keys:
+
 Groq API Key
+
 OpenAI API Key
+
 Tavily API Key (for web search)
 
 ## Installation
@@ -65,8 +69,7 @@ uvicorn FastAPI:app --host 127.0.0.1 --port 9999
 streamlit run frontend.py
 ```
 
-### 
-3. Access the App: Open your browser to http://localhost:8501.
+### 3. Access the App: Open your browser to http://localhost:8501.
 
 ## Usage
 Configure the AI: Enter a system prompt (e.g., "Act as a financial advisor").
