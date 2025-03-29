@@ -83,11 +83,11 @@ Invalid Model Name: Verify the selected model is in ALLOWED_MODEL_NAMES (FastAPI
 API Key Issues: Check that .env is loaded correctly and keys are valid.
 ### Project Structure
 
-├── ai_agent.py       # AI agent logic with LangGraph
+├── frontend.py       # Streamlit frontend
 
 ├── FastAPI.py        # Backend API server
 
-├── frontend.py       # Streamlit frontend
+├── ai_agent.py       # AI agent logic with LangGraph
 
 ├── .env             # Environment variables
 
