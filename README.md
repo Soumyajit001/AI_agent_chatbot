@@ -84,9 +84,13 @@ API Key Issues: Check that .env is loaded correctly and keys are valid.
 ### Project Structure
 
 ├── ai_agent.py       # AI agent logic with LangGraph
+
 ├── FastAPI.py        # Backend API server
+
 ├── frontend.py       # Streamlit frontend
+
 ├── .env             # Environment variables
+
 └── requirements.txt  # Dependencies
 
 ### Contributing
