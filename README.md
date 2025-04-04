@@ -63,6 +63,10 @@ TAVILY_API_KEY=your_tavily_api_key
 ```bash
 uvicorn FastAPI:app --host 127.0.0.1 --port 9999
 ```
+URL for api
+```bash
+http://localhost:9999/redoc
+```
 
 ### 2. Launch the Streamlit Frontend (in a separate terminal):
 ```bash
